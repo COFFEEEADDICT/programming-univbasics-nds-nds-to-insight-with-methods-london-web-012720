@@ -21,22 +21,15 @@ end
 
 
 def directors_totals(nds)
-
-name_i = 0
-result = {}
-second_count = 0
-
-
-  while name_i < nds.length do
-    new_total = 0
-      insert_name = nds[name_i][:name]
-
-          #new_total = gross_for_director(nds)
-
-        name_i += 1
-        result[insert_name] = gross_for_director(nds)
-puts result
-        end
+  result = {}
+    index = 0
+    while index < nds.size do
+      director = source[director_index]
+      result[director[:name]] = gross_for_director(director)
+      director_index += 1
+    end
+    puts result
+    result
 
 return result
 end
